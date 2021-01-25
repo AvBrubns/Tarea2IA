@@ -19,269 +19,7 @@
    <string>Tarea1</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* QWidget ----------------------------------------------------------------
-
---------------------------------------------------------------------------- */
-QWidget {
-  background-color: #19232D;
-  border: 0px solid #32414B;
-  padding: 0px;
-  color: #F0F0F0;
-  selection-background-color: #1464A0;
-  selection-color: #F0F0F0;
-}
-
-QWidget:disabled {
-  background-color: #19232D;
-  color: #787878;
-  selection-background-color: #14506E;
-  selection-color: #787878;
-}
-
-QWidget::item:selected {
-  background-color: #1464A0;
-}
-
-QWidget::item:hover {
-  background-color: #148CD2;
-  color: #32414B;
-}
-QMainWindow::separator {
-  background-color: #32414B;
-  border: 0px solid #19232D;
-  spacing: 0px;
-  padding: 2px;
-}
-
-QMainWindow::separator:hover {
-  background-color: #505F69;
-  border: 0px solid #148CD2;
-}
-
-QMainWindow::separator:horizontal {
-  width: 5px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  image: url(&quot;:/qss_icons/rc/toolbar_separator_vertical.png&quot;);
-}
-
-QMainWindow::separator:vertical {
-  height: 5px;
-  margin-left: 2px;
-  margin-right: 2px;
-  image: url(&quot;:/qss_icons/rc/toolbar_separator_horizontal.png&quot;);
-}
-QFrame {
-  border-radius: 4px;
-  border: 1px solid #32414B;
-}
-QFrame[frameShape=&quot;0&quot;] {
-  border-radius: 4px;
-  border: 1px transparent #32414B;
-}
-
-QFrame[frameShape=&quot;4&quot;] {
-  max-height: 2px;
-  border: none;
-  background-color: #32414B;
-}
-
-QFrame[frameShape=&quot;5&quot;] {
-  max-width: 2px;
-  border: none;
-  background-color: #32414B;
-}
-QMenuBar {
-  background-color: #32414B;
-  padding: 2px;
-  border: 1px solid #19232D;
-  color: #F0F0F0;
-}
-
-QMenuBar:focus {
-  border: 1px solid #148CD2;
-}
-
-QMenuBar::item {
-  background: transparent;
-  padding: 4px;
-}
-
-QMenuBar::item:selected {
-  padding: 4px;
-  background: transparent;
-  border: 0px solid #32414B;
-}
-
-QMenuBar::item:pressed {
-  padding: 4px;
-  border: 0px solid #32414B;
-  background-color: #148CD2;
-  color: #F0F0F0;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-QMenu {
-  border: 0px solid #32414B;
-  color: #F0F0F0;
-  margin: 0px;
-}
-
-QMenu::separator {
-  height: 1px;
-  background-color: #505F69;
-  color: #F0F0F0;
-}
-
-QMenu::icon {
-  margin: 0px;
-  padding-left: 8px;
-}
-
-QMenu::item {
-  background-color: #32414B;
-  padding: 4px 24px 4px 24px;
-  /* Reserve space for selection border */
-  border: 1px transparent #32414B;
-}
-
-QMenu::item:selected {
-  color: #F0F0F0;
-}
-
-QMenu::indicator {
-  width: 12px;
-  height: 12px;
-  padding-left: 6px;
-  /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
-  /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
-}
-
-QMenu::indicator:non-exclusive:unchecked {
-  image: url(&quot;:/qss_icons/rc/checkbox_unchecked.png&quot;);
-}
-
-QMenu::indicator:non-exclusive:unchecked:selected {
-  image: url(&quot;:/qss_icons/rc/checkbox_unchecked_disabled.png&quot;);
-}
-
-QMenu::indicator:non-exclusive:checked {
-  image: url(&quot;:/qss_icons/rc/checkbox_checked.png&quot;);
-}
-
-QMenu::indicator:non-exclusive:checked:selected {
-  image: url(&quot;:/qss_icons/rc/checkbox_checked_disabled.png&quot;);
-}
-
-QMenu::indicator:exclusive:unchecked {
-  image: url(&quot;:/qss_icons/rc/radio_unchecked.png&quot;);
-}
-
-QMenu::indicator:exclusive:unchecked:selected {
-  image: url(&quot;:/qss_icons/rc/radio_unchecked_disabled.png&quot;);
-}
-
-QMenu::indicator:exclusive:checked {
-  image: url(&quot;:/qss_icons/rc/radio_checked.png&quot;);
-}
-
-QMenu::indicator:exclusive:checked:selected {
-  image: url(&quot;:/qss_icons/rc/radio_checked_disabled.png&quot;);
-}
-
-QMenu::right-arrow {
-  margin: 5px;
-  image: url(&quot;:/qss_icons/rc/arrow_right.png&quot;);
-  height: 12px;
-  width: 12px;
-}
-QLabel {
-  background-color: #19232D;
-  border: 0px solid #32414B;
-  padding: 2px;
-  margin: 0px;
-  color: #F0F0F0;
-}
-
-QLabel:disabled {
-  background-color: #19232D;
-  border: 0px solid #32414B;
-  color: #787878;
-}
-QPushButton {
-  background-color: #505F69;
-  border: 1px solid #32414B;
-  color: #F0F0F0;
-  border-radius: 4px;
-  padding: 3px;
-  outline: none;
-  /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
-  min-width: 80px;
-}
-
-QPushButton:disabled {
-  background-color: #32414B;
-  border: 1px solid #32414B;
-  color: #787878;
-  border-radius: 4px;
-  padding: 3px;
-}
-
-QPushButton:checked {
-  background-color: #32414B;
-  border: 1px solid #32414B;
-  border-radius: 4px;
-  padding: 3px;
-  outline: none;
-}
-
-QPushButton:checked:disabled {
-  background-color: #19232D;
-  border: 1px solid #32414B;
-  color: #787878;
-  border-radius: 4px;
-  padding: 3px;
-  outline: none;
-}
-
-QPushButton:checked:selected {
-  background: #1464A0;
-  color: #32414B;
-}
-
-QPushButton::menu-indicator {
-  subcontrol-origin: padding;
-  subcontrol-position: bottom right;
-  bottom: 4px;
-}
-
-QPushButton:pressed {
-  background-color: #19232D;
-  border: 1px solid #19232D;
-}
-
-QPushButton:pressed:hover {
-  border: 1px solid #148CD2;
-}
-
-QPushButton:hover {
-  border: 1px solid #148CD2;
-  color: #F0F0F0;
-}
-
-QPushButton:selected {
-  background: #1464A0;
-  color: #32414B;
-}
-
-QPushButton:hover {
-  border: 1px solid #148CD2;
-  color: #F0F0F0;
-}
-
-QPushButton:focus {
-  border: 1px solid #1464A0;
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
@@ -305,16 +43,16 @@ QPushButton:focus {
     <widget class="QLabel" name="tituloArchivo">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>20</y>
-       <width>401</width>
-       <height>21</height>
+       <x>30</x>
+       <y>10</y>
+       <width>651</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Nunito</family>
-       <pointsize>16</pointsize>
+       <pointsize>12</pointsize>
       </font>
      </property>
      <property name="text">
@@ -344,6 +82,29 @@ QPushButton:focus {
       </rect>
      </property>
     </widget>
+    <widget class="QPushButton" name="btnDibujar">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>20</y>
+       <width>88</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dibujar</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="inputArbol">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>20</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -352,7 +113,7 @@ QPushButton:focus {
      <x>0</x>
      <y>0</y>
      <width>869</width>
-     <height>30</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuBFS">
