@@ -118,6 +118,6 @@ class dGraph:
         nx.draw_networkx_nodes(g,pox)
         nx.draw_networkx_edge_labels(g,pox,edge_labels=edge_labels)
         nx.draw_networkx_labels(g,pox)
-        nx.draw_networkx_edges(g,pox,edge_color='black',arrows=True)
+        nx.draw_networkx_edges(g,pox,edge_color='red',arrows=True)
         plt.show()
         
