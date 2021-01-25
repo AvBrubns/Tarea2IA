@@ -6,7 +6,7 @@ import sys
 
 class Logs:
     def __init__(self):
-        self.logPath='../logs/logs.txt'
+        self.logPath='logs/logs.txt'
         self.errorpath = 'logs/error.txt'
     def writeLog(self,text):
         try:

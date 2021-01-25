@@ -1,0 +1,5 @@
+	Programa iniciado:Sun Jan 24 20:57:46 2021
+Se dio clic:BFS-01
+Se crearon las rutas del nodo:[A] al [D]
+Numero de Rutas creadas:5
+	El programa se cerro a las:Sun Jan 24 20:58:05 2021	
